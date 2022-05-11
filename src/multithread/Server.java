@@ -27,8 +27,6 @@ public class Server {
                 
 	        try {
           
-               
-          
         serverSocket = new ServerSocket(porta);
        System.out.println("server avviato \n");
              
@@ -42,6 +40,8 @@ public class Server {
         try {
             socket=serverSocket.accept();
             System.out.println("server in ascolto/n");
+             ClientHandler handler = new ClientHandler(socket);
+            new Thread(handler).start();
         } catch (IOException ex) {
             Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
         }

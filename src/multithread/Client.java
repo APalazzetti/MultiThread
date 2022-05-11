@@ -54,6 +54,13 @@ public class Client {
     
     return "";
 }
+     public void chiudi(){
+        try {
+            client.close();
+        } catch (IOException ex) {
+            System.err.print(ex);
+        }
+    }
 
 
     }

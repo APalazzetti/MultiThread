@@ -18,7 +18,7 @@ public class GestoreServer {
        Server srv = new Server(2000);
         while(true){
             srv.ascolto();
-            srv.scrivi("Benvenuto client");
+            
         }
     }
     
